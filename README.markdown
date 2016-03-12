@@ -1,6 +1,6 @@
 ## Slides For Enzyme Presentation
 
-Here are the slides from the Enzyme presentation available online [http://enzyme-presentation.surge.sh](enzyme-presentation.surge.sh).
+Here are the slides from the Enzyme presentation available online [enzyme-presentation.surge.sh](http://enzyme-presentation.surge.sh)
 
 ### Install and Run
 
