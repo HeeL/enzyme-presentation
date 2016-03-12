@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "enzyme-presentation",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "Slides for Enzyme presentation",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
