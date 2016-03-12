@@ -50,11 +50,18 @@ const theme = createTheme({
     blue: "#1b85b8"
 });
 
+const imageSrc = (name) => images[name].replace("/", "");
+
 export default class Presentation extends React.Component {
     render() {
         return (
             <Spectacle theme={theme}>
                 <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+
+                    <Slide transition={["slide"]} bgColor="primary" notes="Some notes for the slide">
+                        <Heading size={3} caps textColor="white">Enzyme</Heading>
+                        <Image src={imageSrc("runningTests")} margin="0px auto 40px" width="850px" height="537px"/>
+                    </Slide>
 
                     <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
                         <CodePane lang="jsx" source={require("raw!../assets/deck.example")} margin="20px auto" />
