@@ -113,6 +113,11 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="17px" source={require("raw!../assets/code_snippets/expect_not_throw.js.example")} />
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textColor="white" fit margin="20px 10px">Another way of doing this:</Text>
+                        <CodePane lang="js" textSize="17px" source={require("raw!../assets/code_snippets/find_all.js.example")} />
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">

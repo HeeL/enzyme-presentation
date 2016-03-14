@@ -1,0 +1,3 @@
+ageSelectors = ShallowTestUtils.findAllWithType(childrenSelector, AgeSelector);
+
+expect(ageSelectors).to.have.length(1);
