@@ -1,7 +1,5 @@
-// Import React
 import React from "react";
 
-// Import Spectacle Core tags
 import {
     Appear,
     BlockQuote,
@@ -12,35 +10,21 @@ import {
     Heading,
     Image,
     Layout,
-    Link,
     ListItem,
     List,
-    Markdown,
     Quote,
     Slide,
     Spectacle
 } from "spectacle";
 
-// Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
-
-// Import theme
 import createTheme from "spectacle/lib/themes/default";
 
-// Import custom component
-import Interactive from "../assets/interactive";
-
-// Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
-
 const images = {
-    runningTests: require("../assets/running_tests.gif"),
-    city: require("../assets/city.jpg"),
-    kat: require("../assets/kat.png"),
-    logo: require("../assets/formidable-logo.svg"),
-    markdown: require("../assets/markdown.png")
+    runningTests: require("../assets/running_tests.gif")
 };
 
 preloader(images);
@@ -96,7 +80,7 @@ export default class Presentation extends React.Component {
                         </List>
                     </Slide>
 
-                    <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+                    <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
                                 Full Width
@@ -137,22 +121,6 @@ export default class Presentation extends React.Component {
                         </BlockQuote>
                     </Slide>
 
-                    <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-                        <Heading caps fit size={1} textColor="primary">
-                        Inline Markdown
-                        </Heading>
-                        <Markdown>
-                        {`
-                            ![Markdown Logo](${images.markdown.replace("/", "")})
-
-                            You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-                            * Lists too!
-                            * With ~~strikethrough~~ and _italic_
-                            * And lets not forget **bold**
-                            `}
-                            </Markdown>
-                    </Slide>
-
                     <Slide transition={["slide", "spin"]} bgColor="primary">
                         <Heading caps fit size={1} textColor="tertiary">
                             Smooth
@@ -162,33 +130,19 @@ export default class Presentation extends React.Component {
                         </Heading>
                     </Slide>
 
-                        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-                            <List>
-                                <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-                                <Appear><ListItem>Autofit text</ListItem></Appear>
-                                <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-                                <Appear><ListItem>React-Router navigation</ListItem></Appear>
-                                <Appear><ListItem>PDF export</ListItem></Appear>
-                                <Appear><ListItem>And...</ListItem></Appear>
-                            </List>
-                        </Slide>
+                    <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+                        <List>
+                            <Appear><ListItem>Inline style based theme system</ListItem></Appear>
+                            <Appear><ListItem>Autofit text</ListItem></Appear>
+                            <Appear><ListItem>Flexbox layout system</ListItem></Appear>
+                            <Appear><ListItem>React-Router navigation</ListItem></Appear>
+                            <Appear><ListItem>PDF export</ListItem></Appear>
+                            <Appear><ListItem>And...</ListItem></Appear>
+                        </List>
+                    </Slide>
 
-                        <Slide transition={["slide"]} bgColor="primary">
-                            <Heading size={1} caps fit textColor="tertiary">
-                                Your presentations are interactive
-                            </Heading>
-                            <Interactive/>
-                        </Slide>
-
-                        <Slide transition={["spin", "slide"]} bgColor="tertiary">
-                            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-                                Made with love in Seattle by
-                            </Heading>
-                            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
-                        </Slide>
-
-                    </Deck>
-                </Spectacle>
-            );
+                </Deck>
+            </Spectacle>
+        );
     }
 }
