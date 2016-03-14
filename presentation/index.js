@@ -103,6 +103,11 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px">map().filter().find()</CodePane>
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textColor="white" fit margin="20px 10px">Chain finders and combine with other methods:</Text>
+                        <CodePane lang="js" textSize="20px">listComponent.find('.item span').find('a').children().first();</CodePane>
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
