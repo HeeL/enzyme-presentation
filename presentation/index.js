@@ -14,7 +14,8 @@ import {
     List,
     Quote,
     Slide,
-    Spectacle
+    Spectacle,
+    Text
 } from "spectacle";
 
 import preloader from "spectacle/lib/utils/preloader";
@@ -78,6 +79,13 @@ export default class Presentation extends React.Component {
                                 </ListItem>
                             </Appear>
                         </List>
+                    </Slide>
+
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textAlign="left" textColor="white" margin="20px 10px">Different interfaces for rendering with TestUtils and ShallowTestUtils.
+                        Method names for finders are not consistent and sometimes cryptical:</Text>
+                        <CodePane lang="js" textSize="20px">TestUtils.scryRenderedComponentsWithType()</CodePane>
+                        <CodePane lang="js" textSize="20px">ShallowTestUtils.findAllWithClass()</CodePane>
                     </Slide>
 
                     <Slide transition={["slide"]}>
