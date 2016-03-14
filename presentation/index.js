@@ -95,6 +95,14 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px">searchForm.find('li > a.foo'); // find using selector</CodePane>
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textColor="white" fit margin="20px 10px">All return values are wrappers:</Text>
+                        <CodePane lang="js" textSize="20px">find(filter(map()))</CodePane>
+                        ||<br />
+                        V
+                        <CodePane lang="js" textSize="20px">map().filter().find()</CodePane>
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
