@@ -63,6 +63,15 @@ export default class Presentation extends React.Component {
                         <Image src={imageSrc("runningTests")} margin="0px auto 40px" width="850px" height="537px"/>
                     </Slide>
 
+                    <Slide transition={["slide"]} bgColor="primary" textColor="white">
+                        <Heading size={3} caps textColor="white">Why?</Heading>
+                        <List>
+                            <Appear><ListItem textSize="60px">Make tests more readable</ListItem></Appear>
+                            <Appear><ListItem textSize="60px">Less boilerplate</ListItem></Appear>
+                            <Appear><ListItem textSize="60px">Simplify common use cases</ListItem></Appear>
+                        </List>
+                    </Slide>
+
                     <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
                         <CodePane lang="jsx" source={require("raw!../assets/deck.example")} margin="20px auto" />
                     </Slide>
