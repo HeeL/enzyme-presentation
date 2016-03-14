@@ -72,8 +72,28 @@ export default class Presentation extends React.Component {
                         </List>
                     </Slide>
 
-                    <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<ul><li>talk about that</li><li>and that</li></ul>">
-                        <CodePane lang="jsx" source={require("raw!../assets/deck.example")} margin="20px auto" />
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <CodePane
+                            source={require("raw!../assets/code_snippets/import_enzyme.js.example")}
+                            lang="jsx"
+                            textSize="20px" />
+                        <List>
+                            <Appear>
+                                <ListItem textSize="40px">
+                                    Shallow rendering is the preferable and the fastest way of rendering
+                                </ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem textSize="38px" margin="40px 0">
+                                    mount() does a full rendering, alternative to our renderIntoDocument
+                                </ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem textSize="40px">
+                                    render() performs rendering of react components to static HTML
+                                </ListItem>
+                            </Appear>
+                        </List>
                     </Slide>
 
                     <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
