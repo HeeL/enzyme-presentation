@@ -88,6 +88,13 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px">ShallowTestUtils.findAllWithClass()</CodePane>
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textColor="white" fit margin="20px 10px">In Enzyme its all covered with method find:</Text>
+                        <CodePane lang="js" textSize="20px">searchForm.find('PackageSearch'); // find by type name</CodePane>
+                        <CodePane lang="js" textSize="20px">searchForm.find(PackageSearch); // find by type</CodePane>
+                        <CodePane lang="js" textSize="20px">searchForm.find('li > a.foo'); // find using selector</CodePane>
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
