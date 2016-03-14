@@ -1,0 +1,3 @@
+const findSelectList = ShallowTestUtils.findWithType.bind(null, additionalMonths, SelectList);
+
+expect(findSelectList).to.not.throw();
