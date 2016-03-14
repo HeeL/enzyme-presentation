@@ -118,6 +118,11 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="17px" source={require("raw!../assets/code_snippets/find_all.js.example")} />
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
+                        <Text textColor="white" fit margin="20px 10px">Chain won't throw and always return a wrapper:</Text>
+                        <CodePane lang="js" textSize="20px">listComponent.find('.item span').find('a').children().first();</CodePane>
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
