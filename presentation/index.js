@@ -25,14 +25,16 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const images = {
-    runningTests: require("../assets/running_tests.gif")
+    runningTests: require("../assets/running_tests.gif"),
+    sign: require("../assets/sign.jpg")
 };
 
 preloader(images);
 
 const theme = createTheme({
     primary: "#5a5255",
-    blue: "#1b85b8"
+    blue: "#1b85b8",
+    gray: "#999"
 });
 
 const imageSrc = (name) => images[name].replace("/", "");
@@ -130,6 +132,10 @@ export default class Presentation extends React.Component {
                         <Appear>
                             <CodePane lang="js" textSize="20px">shallow(component, context)</CodePane>
                         </Appear>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
+                        <Image src={imageSrc("sign")} margin="auto" width="800px" height="450px"/>
                     </Slide>
 
                     <Slide transition={["slide"]}>
