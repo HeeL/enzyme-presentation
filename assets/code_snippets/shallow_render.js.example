@@ -1,0 +1,11 @@
+import { createRenderer } from 'react-addons-test-utils';
+
+const render = (component, context) => {
+    const renderer = createRenderer();
+
+    renderer.render(component, context);
+
+    return renderer.getRenderOutput();
+};
+
+export default render;

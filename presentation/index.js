@@ -123,6 +123,15 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px">listComponent.find('.item span').find('a').children().first();</CodePane>
                     </Slide>
 
+                    <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white" notes="Refactoring with Enzyme is always about deleting code">
+                        <Text textColor="white" fit margin="20px 10px">test/unit/shallowRender.js:</Text>
+                        <CodePane lang="js" textSize="17px" source={require("raw!../assets/code_snippets/shallow_render.js.example")} />
+                        =
+                        <Appear>
+                            <CodePane lang="js" textSize="20px">shallow(component, context)</CodePane>
+                        </Appear>
+                    </Slide>
+
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
                             <Heading size={1} caps fit textColor="primary">
