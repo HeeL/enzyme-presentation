@@ -126,6 +126,13 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px">listComponent.find('.item span').find('a').children().first();</CodePane>
                     </Slide>
 
+                    <Slide>
+                        <Heading size={2} textColor="white" margin="20px 0">More Complex Finders</Heading>
+                        <CodePane lang="js" textSize="20px" margin="50px auto">
+                            wrapper.findWhere(n => typeof n.type() !== 'string');
+                        </CodePane>
+                    </Slide>
+
                     <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white" notes="Refactoring with Enzyme is always about deleting code">
                         <Text textColor="white" fit margin="20px 10px">test/unit/shallowRender.js:</Text>
                         <CodePane lang="js" textSize="17px" source={require("raw!../assets/code_snippets/shallow_render.js.example")} />
@@ -155,10 +162,7 @@ export default class Presentation extends React.Component {
                     </Slide>
 
                     <Slide>
-                        <Heading size={2} textColor="white" margin="20px 0">More Complex Finders</Heading>
-                        <CodePane lang="js" textSize="20px" margin="50px auto">
-                            wrapper.findWhere(n => typeof n.type() !== 'string');
-                        </CodePane>
+                            <CodePane lang="js" margin="25px 0" textSize="17px" source={require("raw!../assets/code_snippets/simulate.js.example")} />
                     </Slide>
 
                     <Slide>
