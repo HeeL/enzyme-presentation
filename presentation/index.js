@@ -2,17 +2,12 @@ import React from "react";
 
 import {
     Appear,
-    BlockQuote,
-    Cite,
     CodePane,
     Deck,
-    Fill,
     Heading,
     Image,
-    Layout,
     ListItem,
     List,
-    Quote,
     Slide,
     Spectacle,
     Text
@@ -65,9 +60,10 @@ export default class Presentation extends React.Component {
 
                     <Slide transition={["zoom", "fade"]} bgColor="primary" textColor="white">
                         <CodePane
-                            source={require("raw!../assets/code_snippets/import_enzyme.js.example")}
-                            lang="jsx"
-                            textSize="20px" />
+                          source={require("raw!../assets/code_snippets/import_enzyme.js.example")}
+                          lang="jsx"
+                          textSize="20px"
+                        />
                         <List>
                             <Appear>
                                 <ListItem textSize="40px">
@@ -197,68 +193,7 @@ export default class Presentation extends React.Component {
                         <Image src={imageSrc("dragon")} width="1024px" height="768px"/>
                     </Slide>
 
-                    <Slide transition={["zoom"]}  bgImage={imageSrc("end")} />
-
-                    <Slide transition={["slide"]}>
-                        <Appear fid="1">
-                            <Heading size={1} caps fit textColor="primary">
-                                Full Width
-                            </Heading>
-                        </Appear>
-                        <Appear fid="2">
-                            <Heading size={1} caps fit textColor="tertiary">
-                                Adjustable Darkness
-                            </Heading>
-                        </Appear>
-                        <Appear fid="3">
-                            <Heading size={1} caps fit textColor="primary">
-                                Background Imagery
-                            </Heading>
-                        </Appear>
-                    </Slide>
-
-                    <Slide transition={["zoom", "fade"]} bgColor="primary">
-                        <Heading caps fit>Flexible Layouts</Heading>
-                        <Layout>
-                        <Fill>
-                        <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                        Left
-                        </Heading>
-                        </Fill>
-                        <Fill>
-                        <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                        Right
-                        </Heading>
-                        </Fill>
-                        </Layout>
-                    </Slide>
-
-                    <Slide transition={["slide"]} bgColor="black">
-                        <BlockQuote>
-                        <Quote>Wonderfully formatted quotes</Quote>
-                        <Cite>Ken Wheeler</Cite>
-                        </BlockQuote>
-                    </Slide>
-
-                    <Slide transition={["slide", "spin"]} bgColor="primary">
-                        <Heading caps fit size={1} textColor="tertiary">
-                            Smooth
-                        </Heading>
-                        <Heading caps fit size={1} textColor="secondary">
-                            Combinable Transitions
-                        </Heading>
-                    </Slide>
-
-                    <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-                        <List>
-                            <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-                            <Appear><ListItem>Autofit text</ListItem></Appear>
-                            <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-                            <Appear><ListItem>React-Router navigation</ListItem></Appear>
-                            <Appear><ListItem>PDF export</ListItem></Appear>
-                            <Appear><ListItem>And...</ListItem></Appear>
-                        </List>
-                    </Slide>
+                    <Slide transition={["zoom"]} bgImage={imageSrc("end")} />
 
                 </Deck>
             </Spectacle>
