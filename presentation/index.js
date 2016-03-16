@@ -27,7 +27,8 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
     runningTests: require("../assets/running_tests.gif"),
     sign: require("../assets/sign.jpg"),
-    reRenderDiff: require("../assets/re_render_diff.png")
+    reRenderDiff: require("../assets/re_render_diff.png"),
+    debug: require("../assets/debug.png")
 };
 
 preloader(images);
@@ -155,6 +156,14 @@ export default class Presentation extends React.Component {
                         <CodePane lang="js" textSize="20px" margin="50px auto">
                             wrapper.findWhere(n => typeof n.type() !== 'string');
                         </CodePane>
+                    </Slide>
+
+                    <Slide>
+                        <Heading size={2} textColor="white" margin="20px 0">Debugging</Heading>
+                        <CodePane lang="js" textSize="20px">
+                            clampingTextComponent.debug();
+                        </CodePane>
+                        <Image src={imageSrc("debug")} width="736px" height="317px"/>
                     </Slide>
 
                     <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
