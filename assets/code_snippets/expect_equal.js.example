@@ -1,0 +1,2 @@
+expect(form.props.action).to.be.equal('#');
+// expected undefined to equal '#2'

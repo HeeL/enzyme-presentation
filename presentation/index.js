@@ -166,6 +166,27 @@ export default class Presentation extends React.Component {
                         <Image src={imageSrc("debug")} width="736px" height="317px"/>
                     </Slide>
 
+                    <Slide>
+                        <CodePane lang="js" textSize="20px" source={require("raw!../assets/code_snippets/expect_equal.js.example")} />
+                            <Text textColor="white" margin="40px auto">OR</Text>
+                        <CodePane lang="js" textSize="19px" source={require("raw!../assets/code_snippets/expect_have_property.js.example")} />
+                    </Slide>
+
+                    <Slide>
+                        <Heading size={4} textColor="white" margin="20px 0">Why not both?</Heading>
+                        <CodePane lang="js" textSize="20px" source={require("raw!../assets/code_snippets/expect_chai_enzyme.js.example")} />
+                    </Slide>
+
+                    <Slide>
+                        <Heading size={4} textColor="white">Readable assertions</Heading>
+                        <CodePane lang="js" textSize="20px" margin="100px 0 0 0" source={require("raw!../assets/code_snippets/chai_enzyme.js.example")} />
+                    </Slide>
+
+                    <Slide>
+                        <Heading size={4} textColor="white" margin="20px 0">chai-enzyme assertions:</Heading>
+                        <CodePane lang="js" margin="20px 0" textSize="20px" source={require("raw!../assets/code_snippets/chai_enzyme_assertions.js.example")} />
+                    </Slide>
+
                     <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
                         <Image src={imageSrc("sign")} margin="auto" width="800px" height="450px"/>
                     </Slide>

@@ -1,0 +1,3 @@
+expect(form).to.have.prop('action', '#');
+// expected the node in <SearchForm /> to have an 'action' prop
+// with the value '#2' but the value was '#'

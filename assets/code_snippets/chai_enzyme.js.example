@@ -1,0 +1,2 @@
+expect(checkbox).to.be.checked()
+expect(div).to.have.text().match(/Test/)

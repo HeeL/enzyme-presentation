@@ -1,0 +1,2 @@
+expect(form).to.have.deep.property('props.action', '#');
+// expected  Object (root, unrendered, ...) } to have a deep property 'props.action'
