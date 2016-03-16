@@ -28,7 +28,9 @@ const images = {
     runningTests: require("../assets/running_tests.gif"),
     sign: require("../assets/sign.jpg"),
     reRenderDiff: require("../assets/re_render_diff.png"),
-    debug: require("../assets/debug.png")
+    debug: require("../assets/debug.png"),
+    dragon: require("../assets/dragon.jpg"),
+    end: require("../assets/end.jpg")
 };
 
 preloader(images);
@@ -190,6 +192,12 @@ export default class Presentation extends React.Component {
                     <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
                         <Image src={imageSrc("sign")} margin="auto" width="800px" height="450px"/>
                     </Slide>
+
+                    <Slide bgColor="black">
+                        <Image src={imageSrc("dragon")} width="1024px" height="768px"/>
+                    </Slide>
+
+                    <Slide transition={["zoom"]}  bgImage={imageSrc("end")} />
 
                     <Slide transition={["slide"]}>
                         <Appear fid="1">
