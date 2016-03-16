@@ -21,9 +21,10 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
     runningTests: require("../assets/running_tests.gif"),
-    sign: require("../assets/sign.jpg"),
     reRenderDiff: require("../assets/re_render_diff.png"),
+    provideContext: require("../assets/provide_context.png"),
     debug: require("../assets/debug.png"),
+    sign: require("../assets/sign.jpg"),
     dragon: require("../assets/dragon.jpg"),
     end: require("../assets/end.jpg")
 };
@@ -147,6 +148,10 @@ export default class Presentation extends React.Component {
                     <Slide>
                         <Heading size={2} textColor="white" margin="20px 0">Refactoring</Heading>
                         <Image src={imageSrc("reRenderDiff")} width="1025px" height="426px"/>
+                    </Slide>
+
+                    <Slide>
+                        <Image src={imageSrc("provideContext")} width="1040px" height="390px"/>
                     </Slide>
 
                     <Slide>
