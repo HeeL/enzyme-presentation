@@ -1,0 +1,13 @@
+ it('should pass correct initialSelectedSuggestion for searchInputWithSuggestions', () => {
+    const renderer = createRenderer();
+    let searchForm = renderSearchForm({}, {}, renderer);
+    let overlay = ShallowTestUtils.findWithType(searchForm, SearchFormOverlay);
+    let searchInputWithSuggestions = overlay.props.overlay;
+
+    searchInputWithSuggestions.props.onApply('foo', suggestion, 'click');
+    searchForm = renderer.getRenderOutput();
+    overlay = ShallowTestUtils.findWithType(searchForm, SearchFormOverlay);
+    searchInputWithSuggestions = overlay.props.overlay;
+
+    expect(searchInputWithSuggestions.props.initialSelectedSuggestion).to.deep.equal(suggestion);
+});

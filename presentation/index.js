@@ -26,7 +26,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
     runningTests: require("../assets/running_tests.gif"),
-    sign: require("../assets/sign.jpg")
+    sign: require("../assets/sign.jpg"),
+    reRenderDiff: require("../assets/re_render_diff.png")
 };
 
 preloader(images);
@@ -132,6 +133,21 @@ export default class Presentation extends React.Component {
                         <Appear>
                             <CodePane lang="js" textSize="20px">shallow(component, context)</CodePane>
                         </Appear>
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="gray">
+                        <Heading size={2} textColor="white">Re-rendering</Heading>
+                        <CodePane lang="js" margin="25px 0" textSize="17px" source={require("raw!../assets/code_snippets/re_render.js.example")} />
+                    </Slide>
+
+                    <Slide transition={["slide"]} bgColor="gray">
+                        <Heading size={2} textColor="white" margin="0 0 80px 0">Re-render component with Enzyme</Heading>
+                        <CodePane lang="js" textSize="20px" margin="50px auto">searchForm.update();</CodePane>
+                    </Slide>
+
+                    <Slide>
+                        <Heading size={2} textColor="white" margin="20px 0">Refactoring</Heading>
+                        <Image src={imageSrc("reRenderDiff")} width="1025px" height="426px"/>
                     </Slide>
 
                     <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
