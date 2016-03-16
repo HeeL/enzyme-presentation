@@ -150,6 +150,13 @@ export default class Presentation extends React.Component {
                         <Image src={imageSrc("reRenderDiff")} width="1025px" height="426px"/>
                     </Slide>
 
+                    <Slide>
+                        <Heading size={2} textColor="white" margin="20px 0">More Complex Finders</Heading>
+                        <CodePane lang="js" textSize="20px" margin="50px auto">
+                            wrapper.findWhere(n => typeof n.type() !== 'string');
+                        </CodePane>
+                    </Slide>
+
                     <Slide transition={["slide"]} bgColor="gray" notes="Its all in master - use it">
                         <Image src={imageSrc("sign")} margin="auto" width="800px" height="450px"/>
                     </Slide>
